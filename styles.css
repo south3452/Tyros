@@ -58,7 +58,7 @@ header .logo, i{
 
 .nav__links li a{
     color: #fff;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .nav__links li a:hover{
@@ -127,7 +127,7 @@ header .logo, i{
     transition: 0.2s;
 }
 
-.banner .textbox #where{
+.banner #where{
     position: relative;
     display: inline-block;
     background: transparent;
@@ -142,7 +142,7 @@ header .logo, i{
     transition: 0.2s;
 }
 
-.banner .textbox #where:hover{
+.banner #where:hover{
     background-color: rgb(255, 73, 41);
 }
 
@@ -161,6 +161,35 @@ z-index: 1;
 
 .banner .Videobox video{
     opacity: 1;
+}
+
+.goal{
+    background-color: #B91372;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+ }
+ 
+
+.textbox2{
+    position: relative;
+    max-width: 550px;
+    z-index: 2;
+}
+
+ .textbox2 h2{
+    color: #fff;
+    font-size: 3em;
+}
+
+ .textbox2 p{
+    color: #fff;
+    font-size: 1.1em;
+    margin: 5px 0 25px;
 }
 
 .banner .sci{
