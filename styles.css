@@ -304,7 +304,7 @@ form .textarea textarea:focus::placeholder{
 .banner .sci{
 position: absolute;
 bottom: 20px;
-letter-spacing: 100px;
+letter-spacing: 35px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -316,8 +316,6 @@ align-items: center;
 
 .banner .sci i{
     display: inline-block;
-    margin-right: 15px;
-
 }
 
 .banner .sci li i{
@@ -329,6 +327,93 @@ align-items: center;
 .banner .sci  i:hover{
    color: rgb(35, 83, 228);
 }
+
+
+.faq{
+    background-color: #1B1725;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+.accordion{
+    max-width: 600px;
+    padding: 0 20px;
+    margin: 0 auto;
+  
+}
+
+.accordion .parent-tab{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.18);
+}
+
+.accordion .parent-tab label{
+    background: #534B62;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 3px;
+    position: relative;
+    z-index: 99;
+}
+
+.accordion label span{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 0 -1px 1px #0056b3;
+}
+
+.accordion label .icon{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    color: black;
+    font-size: 15px;
+    display: block;
+    border-radius: 50%;
+
+}
+
+.parent-tab input:checked ~ label .icon i:before{
+    content: '\f068';
+}
+.accordion label .icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.accordion .parent-tab .content{
+    background-color: #fff;
+    color: black;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.parent-tab input:checked ~ .content{
+    max-height: 100vh;
+    overflow: hidden;
+}
+.accordion .parent-tab .content p{
+    font-size: 16px;
+    padding: 15px 20px;
+}
+
+.accordion input{
+    display: none;
+}
+
 
 /* RESPONSIVE */
 
@@ -384,7 +469,30 @@ align-items: center;
     .banner .sci{
         left: 50px;
     }
+
+    .parent-tab{
+        width: 250px;
+    }
+
+    .accordion .parent-tab label{
+        background: #534B62;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        border-radius: 3px;
+        position: relative;
+        z-index: 99;
+    }
+    
+    .accordion label .icon{
+        left: 10px;
+    }
+
 }
+
+
 
 @media (max-width: 500px){
     .banner .Videobox{
