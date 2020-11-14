@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins&display=swap');
 
+*::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #8a2be2;
+  }
+  body::-webkit-scrollbar-thumb{
+      border: 1px solid;
+  }
+
 *{
     margin: 0;
     padding: 0;
@@ -35,6 +48,10 @@ header .logo, i{
     font-weight: 700;
     letter-spacing: 1;
     text-decoration: none;
+}
+
+.header{
+    width: 100%
 }
 
 .center{
@@ -143,11 +160,11 @@ header .logo, i{
 }
 
 .banner #where:hover{
-    background-color: rgb(255, 73, 41);
+    background-color: rgb(248, 57, 24);
 }
 
 .banner .textbox a:hover{
-    background-color: rgb(53, 100, 240);
+    background-color: rgb(235, 202, 20);
 }
 
 .banner .Videobox{
@@ -164,13 +181,13 @@ z-index: 1;
 }
 
 .goal{
-    background-color: #B91372;
+    background-color: #4B0082;
     position: relative;
     width: 100%;
     min-height: 100vh;
     padding: 0 100px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center; 
  }
  
@@ -195,23 +212,24 @@ z-index: 1;
 
 
 .wrapper{
-    position: flex;
     background: #fff;
     max-width: 400px;
-    border-radius: 15px 15px 15px 15px;
-    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+    border-radius: 15px 15px 10px 10px;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
     transition: all 0.2s cubic-bezier(0.68,-0.55,0.265,1.55);
+    margin-block-start: 2em;
+    margin-block-end: 2em;
 }
 
 
 .wrapper .head-text{
     line-height: 60px;
     color: #fff;
-    border-radius: 15px 15px 0 0;
+    border-radius: 10px 10px 0 0;
     padding: 0 20px;
     font-weight: 500;
     font-size: 20px;
-    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    background: -webkit-linear-gradient(left, #893ab3 ,#d319ef);
 }
 
 .wrapper .chat-box{
@@ -249,10 +267,10 @@ form .field button,
 form .textarea textarea{
     width: 100%;
     height: 100%;
-    padding-left: 20px;
+    padding: 10px;
     border: 1px solid lightgrey;
     outline: none;
-    border-radius: 25px;
+    border-radius: 15px;
     font-size: 16px;
     transition: all 0.3s ease;
 }
@@ -280,9 +298,7 @@ form .textarea textarea:focus::placeholder{
 
 .chat-box form .textarea textarea{
     height: 100%;
-    border-radius: 50px;
     resize: none;
-    padding: 15px 20px;
     font-size: 16px;
 }
 
@@ -293,7 +309,7 @@ form .textarea textarea:focus::placeholder{
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    background: -webkit-linear-gradient(left, #893ab3 ,#d319ef);
     transition: all 0.3s ease;
 }
 
@@ -330,7 +346,7 @@ align-items: center;
 
 
 .faq{
-    background-color: #1B1725;
+    background-color: #d41313;
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -354,7 +370,7 @@ align-items: center;
 }
 
 .accordion .parent-tab label{
-    background: #534B62;
+    background: #8c1a1a;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -394,8 +410,9 @@ align-items: center;
 }
 
 .accordion .parent-tab .content{
-    background-color: #fff;
-    color: black;
+    background-color: #751111;
+    color: #fff;
+    border-radius: 3px;
     max-height: 0px;
     overflow: hidden;
     transition: all 0.4s ease;
@@ -406,7 +423,7 @@ align-items: center;
     overflow: hidden;
 }
 .accordion .parent-tab .content p{
-    font-size: 16px;
+    font-size: 13px;
     padding: 15px 20px;
 }
 
@@ -475,7 +492,6 @@ align-items: center;
     }
 
     .accordion .parent-tab label{
-        background: #534B62;
         padding: 10px 20px;
         display: flex;
         align-items: center;
