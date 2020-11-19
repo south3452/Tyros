@@ -4,23 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+
     <script src="https://kit.fontawesome.com/5c13289023.js" crossorigin="anonymous"></script>
-    <script src="main.js" defer></script>
+    <script src="Js/accordion.js" defer></script>
+    <script src="Js/menu.js"></script>
+    <script src="Js/anime.min.js"></script>
 
     <title>Tyros</title>
 </head>
 <body class="center">
     <header class="header">
-        <a href="#" class="logo">Tyros<img src="" alt=""></a>
-        <div class="nav-header">
-            <nav>
-                <ul class="nav__links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Ramo</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1 class="logo">
+            <a class="logo-link" href="#">TYROS</a>
+        </h1>
+
+        <nav>
+            <div class="main-header">
+                <canvas class="nav-canvas"></canvas>
+                <button class="menu-js menu">
+                    <span class="menu-line-1 menu-line"></span>
+                    <span class="menu-line-2 menu-line"></span>
+                    <span class="menu-line-3 menu-line"></span>
+                </button>
+
+                <div class="nav-overlay nav-js">
+                    <div class="nav-content">
+                        <div class="nav-js-header nav-header">
+                            <div class="nav-header-line nav-js-header-line"></div>
+                        </div>
+
+                        <ul class="nav-links">
+                            <li class="nav-links nav-js-animate"><a href="#">Home</a></li>
+                            <li class="nav-links nav-js-animate"><a href="#">Ramos</a></li>
+                            <li class="nav-links nav-js-animate"><a href="#">Contato</a></li>
+                        </ul>
+
+                        <div class="nav-sublinks nav-js-animate">
+                            <div class="nav-js-animate">
+                                <a class="nav-sublink" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="nav-sublink" href="#"><i class="fa fa-twitter"></i></a>
+                                <a class="nav-sublink" href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
     <div class="maxwidth center">
         <div class="banner">
@@ -47,12 +76,6 @@
             <div class="Videobox">
                 <video src="video.mp4" muted autoplay loop type="mp4"></video>
             </div>
-
-            <ul class="sci">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-instagram"></i>
-            </ul>
         </div>
 
         <div class="goal">
