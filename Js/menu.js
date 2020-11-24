@@ -55,7 +55,7 @@ app.menu.reveal = e => {
 
   app.overlay.show({
     position: app.clickPosition(e),
-    fill: "#31296d"
+    fill: "#000"
   });
 
   anime.remove('.nav-js, .nav-js-header-line, .nav-js-animate');
@@ -83,7 +83,7 @@ app.menu.reveal = e => {
   select(".nav-js-header-line").style.transform.replace(/scale\([0-9|\.]*\)/, 'scale(0.2)');
   anime({
     targets:'.nav-js-header-line',
-    scaleX: [0.28, .7],
+    scaleX: [-0.5, -0.21],
     delay: containerDelay,
     easing: "easeInOutExpo",
     duration: 600
@@ -114,7 +114,7 @@ app.menu.hide = (e) => {
 
   app.overlay.hide({
     position: app.overlay.lastStartingPoint,
-    fill: "#31296d",
+    fill: "#000",
     complete: () => dispatch("app:menuDidHide")
   });
 
