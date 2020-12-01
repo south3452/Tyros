@@ -32,6 +32,10 @@ ul, ol, li{
     list-style: none;
 }
 
+.nav-links a{
+    color: #fff;
+}
+
 .center{
     margin: 0 auto;
 }
@@ -329,7 +333,7 @@ align-items: center;
 }
 
 .accordion-item-header{
-    background-color: #521945;
+    background-color: #942121;
     padding: 0.5rem 3rem 0.5rem 1rem;
     min-height: 3.5rem;
     line-height: 1.25rem;
