@@ -1,0 +1,29 @@
+.wrap-menu{
+    background-color: #242424;
+}
+.menu{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: All .3s ease-in-out;
+}
+
+.menu_open{
+    transform: translateX(0);
+}
+
+.menu-item{
+    text-align: center;
+    padding: 20px 15px;
+    background-color: #313638;
+}
+
+.menu-item-action{
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}

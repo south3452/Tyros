@@ -1,0 +1,16 @@
+.btnMenu{
+  display: block;  
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  text-indent: -9999px;
+  padding: 20px 15px;
+}
+
+.btnMenu_open{
+  background-image: url(../images/bars-solid.svg);
+}
+
+.btnMenu_close{
+  background-image: url(../images/bars-solid-black.svg);  
+  background-color: #cecece;
+}
