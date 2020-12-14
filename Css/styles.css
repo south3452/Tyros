@@ -45,14 +45,13 @@ ul, ol, li{
     width: 100%
 }
 
-.banner{
-   position: relative;
-   width: 100%;
-   min-height: 100vh;
-   padding: 0 100px;
-   display: flex;
-   justify-content: flex-start;
-   align-items: center; 
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 30px 100px;
 }
 
 .banner:before{
@@ -145,13 +144,6 @@ z-index: 1;
 
 .goal{
     background-color: #4B0082;
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
  }
  
 
@@ -307,22 +299,12 @@ align-items: center;
    color: rgb(35, 83, 228);
 }
 
-
 .faq{
     background-color: #d41313;
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; 
 }
 
 .accordion{
     width: 600px;
-    padding: 0 20px;
-    margin: 0 auto;
-  
 }
 
 .accordion-item{
@@ -376,7 +358,7 @@ align-items: center;
 {
 
     .banner{
-       padding: 150px 50px 0;
+       padding: 50px;
        flex-direction: column; 
     }
     .banner:before{
@@ -391,12 +373,16 @@ align-items: center;
     }
  
     .goal{
-        padding: 150px 50px 0;
+        padding: 50px;
         flex-direction: column; 
     }
 
     .goal .textbox2 h2{
         font-size: 2.5em;
+    }
+
+    .faq{
+        padding:50px;
     }
 
     .textbox2{
@@ -409,7 +395,7 @@ align-items: center;
 
     .banner .Videobox{
         width: 100%;
-        margin: 40px 0 100px;
+        margin: 40px 0 0;
     }
     .banner .sci{
         left: 50px;
