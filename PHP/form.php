@@ -9,12 +9,13 @@ use PHPMailer\PHPMailer\Exception;
 require '../vendor/autoload.php';
 $nome=$_POST["nome"];
 $email=$_POST["email"];
+$assunto=$_POST["assunto"];
 $texto=$_POST["texto"];
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 try {
     //Configurações do server
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+    $mail->SMTPDebug = SMTP::DEBUG_OFF;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Enviar Usando SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -36,7 +37,7 @@ try {
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'ASSUNTO ASSUNTO';
+    $mail->Subject = $assunto;
     $mail->Body    = $texto;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
