@@ -58,6 +58,10 @@ footer{
     font-weight: normal;
 }
 
+.map{
+    margin-top: 20px
+}
+
 .icon-paypal{
     content: url(./images/paypal.svg);
     margin-block-start: 0.4em;
@@ -68,7 +72,7 @@ footer{
 
 
 .left .content-2 .p-2{
-    text-align: justify;
+    text-align: start;
 }
 
 .left .content-2 .social{
