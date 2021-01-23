@@ -114,8 +114,8 @@
         
             <script src="anime.min.js"></script>
             <script>
-                /*anime({
-                    targets: '#butao',
+                anime({
+                    targets: '#butao ',
                     width: '100px', // -> from '28px' to '100%',
                     translateX: {
                         value: 120,
@@ -124,8 +124,17 @@
                     easing: 'easeInOutQuad',
                     direction: 'alternate',
                     loop: false
-                });*/
+                });
+                
+                function sumir(){
+                    anime({
+                        targets:"#abc",
+                        opacity: 0
+                    });
+                }
 
+                setTimeout(sumir, 1000);
+                
             // Não mexe aqui porra
             </script>
         </div>
