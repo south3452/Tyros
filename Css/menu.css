@@ -16,9 +16,10 @@
 }
 
 .menu-item{
+    border-bottom: 1px solid #ff801e;
     text-align: center;
     padding: 20px 15px;
-    background-color: #313638;
+    background-color: #e06100;
 }
 
 .menu-item-action{
@@ -26,4 +27,10 @@
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
+    transition: All .3s;
 }
+
+.menu-item-action:hover{
+    color: rgb(175, 175, 175);
+}
+
