@@ -256,17 +256,24 @@
                 },
                 easing: 'easeInOutQuad',
                 direction: 'alternate',
-                loop: false
+                loop: false,
+                complete: function(){
+                        anime({
+                            targets:"#abc",
+                            opacity: 0,
+                            delay: 150
+                        });
+                    }
             });
             
-            function sumir(){
+            /*function sumir(){
                 anime({
                     targets:"#abc",
                     opacity: 0
                 });
-            }
+            }*/
 
-            setTimeout(sumir, 1000);
+            //setTimeout(sumir, 1150);
             
         // Não mexe aqui porra
         </script>
