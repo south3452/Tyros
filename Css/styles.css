@@ -54,6 +54,28 @@ ul, ol, li{
     padding: 30px 100px;
 }
 
+.whats{
+    top: auto;
+    bottom: 30px;
+    right: 20px;
+    left: auto;
+    position: fixed;
+    z-index: 9999999;
+    display: block;
+}
+
+.whats-span{
+    height: 65px;
+    width: 65px;
+    background: #16cc10;
+    line-height: 65px !important;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 20%) 0 0 20px 10px;
+}
+
 .banner:before{
     content: '';
     position: absolute;
@@ -358,6 +380,7 @@ align-items: center;
 }
 
 .team{
+    background-color: #0b7062;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -386,6 +409,10 @@ align-items: center;
     align-items: center;
     text-align: center;
     gap: 15px
+}
+
+.contact{
+    background-color:#e66b1b;
 }
 
 #titulo::after{
@@ -436,6 +463,21 @@ align-items: center;
 
     .faq{
         padding:50px;
+    }
+
+    .team{
+        padding: 50px;
+
+    }
+
+    .person{
+        flex-direction: column;
+        gap:30px
+    }
+
+    .contact{
+        padding:50px;
+        flex-direction: column;
     }
 
     .textbox2{

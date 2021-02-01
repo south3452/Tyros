@@ -76,7 +76,10 @@ footer{
 }
 
 .left .content-2 .social{
-    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    margin: 30px 0 0 0;
 }
 
 .left .content-2 .social a{
@@ -124,9 +127,11 @@ footer{
     padding-left: 10px;
 }
 
-.center .content-2 .phone{
+.center .content-2 .phone, .center .content-2 .email{
     margin: 10px 0;
 }
+
+
 
 .right form .text{
     font-size: 1.0625rem;
@@ -228,6 +233,7 @@ footer{
     }
     .main-content .box{
         margin: 5px 0;
+        width: 100%;
     }
     .left .content-2 .social a span{
         height: 150px;
@@ -240,6 +246,9 @@ footer{
     }
     .icon-paypal{
         max-width: 43px;
+    }
+    iframe{
+        width:100%
     }
 }
 
@@ -254,11 +263,15 @@ footer{
     }
     .main-content .box{
         margin: 5px 0;
+        width: 100%;
     }
     .left .content-2 .social a span{
         height: 100px;
         width: 100px;
         line-height: 100px;
+    }
+    iframe{
+        width:100%
     }
 }
 .main-content .center .box {
