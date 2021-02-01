@@ -45,14 +45,35 @@ ul, ol, li{
     width: 100%
 }
 
-.banner{
-   position: relative;
-   width: 100%;
-   min-height: 100vh;
-   padding: 0 100px;
-   display: flex;
-   justify-content: flex-start;
-   align-items: center; 
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 30px 100px;
+}
+
+.whats{
+    top: auto;
+    bottom: 30px;
+    right: 20px;
+    left: auto;
+    position: fixed;
+    z-index: 9999999;
+    display: block;
+}
+
+.whats-span{
+    height: 65px;
+    width: 65px;
+    background: #16cc10;
+    line-height: 65px !important;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 20%) 0 0 20px 10px;
 }
 
 .banner:before{
@@ -145,13 +166,6 @@ z-index: 1;
 
 .goal{
     background-color: #4B0082;
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 0 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
  }
  
 
@@ -307,28 +321,20 @@ align-items: center;
    color: rgb(35, 83, 228);
 }
 
-
 .faq{
-    background-color: #d41313;
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; 
+    background-color: #e53c41;
 }
+
+
 
 .accordion{
     width: 600px;
-    padding: 0 20px;
-    margin: 0 auto;
-  
 }
 
 .accordion-item{
     color: #fff;
     margin: 1rem 0;
-    border-radius: 0.5rem;
+    border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25) ;
 }
 
@@ -342,6 +348,8 @@ align-items: center;
     align-items: center;
     position: relative;
     cursor: pointer;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .accordion-item-header::after{
@@ -359,6 +367,8 @@ align-items: center;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .accordion-item-body-content{
@@ -369,6 +379,58 @@ align-items: center;
     border-image: linear-gradient(to right, transparent, 1);
 }
 
+.team{
+    background-color: #0b7062;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.team .textbox{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.circle{
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 190px;
+    height: 188px;
+}
+.person{
+    display: flex;
+}
+
+.text-img{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 15px
+}
+
+.contact{
+    background-color:#e66b1b;
+}
+
+#titulo::after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: blink .7s infinite;
+}
+
+@keyframes blink{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
 
 /* RESPONSIVE */
 
@@ -376,7 +438,7 @@ align-items: center;
 {
 
     .banner{
-       padding: 150px 50px 0;
+       padding: 50px;
        flex-direction: column; 
     }
     .banner:before{
@@ -391,12 +453,31 @@ align-items: center;
     }
  
     .goal{
-        padding: 150px 50px 0;
+        padding: 50px;
         flex-direction: column; 
     }
 
     .goal .textbox2 h2{
         font-size: 2.5em;
+    }
+
+    .faq{
+        padding:50px;
+    }
+
+    .team{
+        padding: 50px;
+
+    }
+
+    .person{
+        flex-direction: column;
+        gap:30px
+    }
+
+    .contact{
+        padding:50px;
+        flex-direction: column;
     }
 
     .textbox2{
@@ -409,7 +490,7 @@ align-items: center;
 
     .banner .Videobox{
         width: 100%;
-        margin: 40px 0 100px;
+        margin: 40px 0 0;
     }
     .banner .sci{
         left: 50px;

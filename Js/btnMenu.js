@@ -9,3 +9,4 @@ $btnMenuOpen.addEventListener('click', function() {
 $btnMenuClose.addEventListener('click', function() {
     $menu.classList.remove('menu_open')
 })
+
