@@ -52,6 +52,7 @@ ul, ol, li{
     justify-content: space-between;
     align-items: center; 
     padding: 30px 100px;
+    gap: 30px;
 }
 
 .whats{
@@ -206,7 +207,7 @@ z-index: 1;
     padding: 0 20px;
     font-weight: 500;
     font-size: 20px;
-    background: -webkit-linear-gradient(left, #893ab3 ,#d319ef);
+    background: -webkit-linear-gradient(left, #eb640a ,#eb792e);
 }
 
 .wrapper .chat-box{
@@ -286,7 +287,7 @@ form .textarea textarea:focus::placeholder{
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    background: -webkit-linear-gradient(left, #893ab3 ,#d319ef);
+    background: -webkit-linear-gradient(left, #eb640a ,#eb792e);
     transition: all 0.3s ease;
 }
 
@@ -382,8 +383,6 @@ align-items: center;
 .team{
     background-color: #0b7062;
     color: #fff;
-    display: flex;
-    gap: 30px;
 }
 .team .textbox{
     display: flex;
@@ -394,8 +393,8 @@ align-items: center;
     display: inline-block;
     border-radius: 50%;
     overflow: hidden;
-    width: 190px;
-    height: 188px;
+    width: 200px;
+    height: 200px;
 }
 .person{
     display: flex;
@@ -434,7 +433,7 @@ align-items: center;
 
 /* RESPONSIVE */
 
-@media (max-width: 1365px) 
+@media (max-width: 1066px) 
 {
 
     .banner{
@@ -463,11 +462,15 @@ align-items: center;
 
     .faq{
         padding:50px;
+        flex-direction: column;
+    }
+    .faq .accordion{
+        width: 100%
     }
 
     .team{
         padding: 50px;
-
+        flex-direction: column;
     }
 
     .person{

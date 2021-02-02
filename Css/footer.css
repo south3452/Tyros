@@ -222,7 +222,7 @@ footer{
 }
 
 
-@media (max-device-width: 900px){
+@media (max-device-width: 1066px){
     footer{
         position: relative;
         bottom: 0;
@@ -252,7 +252,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1066px){
     footer{
         position: relative;
         bottom: 0;

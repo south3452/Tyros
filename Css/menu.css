@@ -6,10 +6,14 @@
     color: #fff;
 }
 
+.hidden{
+    overflow: hidden;
+}
+
 .menu_open{
     transform: translateX(0);
     position: fixed;
-    z-index: 100;
+    z-index: 99999999;
     background-color: #313638;
     width: 100%;
     height: 100%;
@@ -19,7 +23,7 @@
     border-bottom: 1px solid #ff801e;
     text-align: center;
     padding: 20px 15px;
-    background-color: #e06100;
+    background-color: #313638;
 }
 
 .menu-item-action{
