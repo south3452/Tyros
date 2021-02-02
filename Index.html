@@ -254,14 +254,15 @@
                     value: 120,
                     duration: 1000
                 },
-                easing: 'easeInOutQuad',
+                easing: 'linear',
                 direction: 'alternate',
                 loop: false,
                 complete: function(){
                         anime({
                             targets:"#abc",
+                            direction: 'normal',
+                            easing: 'easeOutQuad',
                             opacity: 0,
-                            delay: 150
                         });
                     }
             });
