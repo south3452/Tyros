@@ -23,19 +23,6 @@
   background-repeat: no-repeat;
   background-position: 10px center;
   text-indent: -9999px;
-<<<<<<< HEAD
-  padding: 15px 15px;
-}
-
-.btnMenu_open{
-  background-image: url(../images/bars-solid.svg);
-  margin: 0 auto;
-}
-
-.btnMenu_close{
-  background-image: url(../images/bars-solid-black.svg);  
-  background-color: #f87c1c;
-=======
   padding: 5px 25px;
   display: none;
 }
@@ -67,5 +54,4 @@
     transform: translateY(-100%);
     transition: All .3s ease-in-out;
 }
->>>>>>> f9de239b7e24b66fd5523ed8864245db1210aa5e
 }

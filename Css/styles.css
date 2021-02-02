@@ -383,7 +383,6 @@ align-items: center;
     background-color: #0b7062;
     color: #fff;
     display: flex;
-    flex-direction: column;
     gap: 30px;
 }
 .team .textbox{
@@ -400,6 +399,7 @@ align-items: center;
 }
 .person{
     display: flex;
+    gap: 70px;
 }
 
 .text-img{
