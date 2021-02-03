@@ -238,7 +238,7 @@
                     </div>
 
                     <div class="field">
-                        <button type="submit" id="butao"><a id="abc">Enviar</a></button>
+                            <button type="submit" id="butao"><a id="abc">Enviar</a><img id="logo" src="/images/logo.png"></img></button>
                     </div>
                 </form>      
             </div>
@@ -262,6 +262,21 @@
                             direction: 'normal',
                             easing: 'easeOutQuad',
                             opacity: 0,
+                            complete: function(){
+                                anime({
+                                    targets:"#logo",
+                                    translateY: -52.5,
+                                    translateX: -10,
+                                    complete: function(){
+                                        anime({
+                                            targets:"#logo",
+                                            rotate: '3turn',
+                                            duration: 7000
+
+                                        });
+                                    }
+                                });
+                            }
                         });
                     }
             });
