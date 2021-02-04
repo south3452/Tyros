@@ -246,6 +246,7 @@
     
         <script src="anime.min.js"></script>
         <script>
+            //fazer o botão diminuir
             anime({
                 targets: '#butao ',
                 width: '100px', // -> from '28px' to '100%',
@@ -256,40 +257,40 @@
                 easing: 'linear',
                 direction: 'alternate',
                 loop: false,
+                begin: function(){
+                    anime({
+                        targets: "#logo",
+                        easing: 'linear',
+                        translateY: -10,
+                        translateX: 0,
+                    });
+                },
+                //fazer o texto sumir
                 complete: function(){
                         anime({
                             targets:"#abc",
                             direction: 'normal',
                             easing: 'easeOutQuad',
                             opacity: 0,
+                            //fazer o logo aparecer
                             complete: function(){
                                 anime({
                                     targets:"#logo",
-                                    translateY: -52.5,
-                                    translateX: -10,
-                                    complete: function(){
+                                    opacity: 1,
+                                    //fazer o logo girar
+                                    begin: function(){
                                         anime({
                                             targets:"#logo",
-                                            rotate: '3turn',
-                                            duration: 7000
-
+                                            rotate: '1turn',
+                                            easing: 'linear', 
+                                            loop: true,
                                         });
                                     }
                                 });
                             }
                         });
-                    }
+                }
             });
-            
-            /*function sumir(){
-                anime({
-                    targets:"#abc",
-                    opacity: 0
-                });
-            }*/
-
-            //setTimeout(sumir, 1150);
-            
         // Não mexe aqui porra
         </script>
     </div>

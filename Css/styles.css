@@ -296,10 +296,11 @@ form .textarea textarea:focus::placeholder{
 }
 
 .field img{
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 50px;
+    max-height: 50px;
     width: auto;
-    height: auto;    
+    height: auto;
+    opacity: 0;
 }
 
 .banner .sci{
@@ -435,6 +436,11 @@ align-items: center;
     50%{
         opacity: 0;
     }
+}
+
+#abc{
+    position: absolute;
+    transform: translate(0px , 4px);
 }
 
 
