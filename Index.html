@@ -255,7 +255,6 @@
                     duration: 1000
                 },
                 easing: 'linear',
-                direction: 'alternate',
                 loop: false,
                 begin: function(){
                     anime({
@@ -291,6 +290,22 @@
                         });
                 }
             });
+
+            
+
+            //Fazer a caixa tremer
+            /*anime({
+                targets:".wrapper",
+                keyframes:[
+                    {translateX: 15},
+                    {translateX: -15},
+                    {translateX: 15},
+                    {translateX: -15},
+                    {translateX: 0},
+                ],
+                easing: 'easeOutElastic(2, .8)',
+                duration: 600
+            });*/
         // Não mexe aqui porra
         </script>
     </div>
