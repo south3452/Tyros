@@ -51,7 +51,7 @@ ul, ol, li{
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding: 30px 100px;
+    padding: 50px 100px;
     gap: 30px;
 }
 
@@ -75,6 +75,10 @@ ul, ol, li{
     border-radius: 50px;
     transition: 0.3s;
     box-shadow: rgba(0, 0, 0, 20%) 0 0 20px 10px;
+}
+
+.banner{
+    height: 100vh;
 }
 
 .banner:before{
@@ -452,6 +456,7 @@ align-items: center;
     .banner{
        padding: 50px;
        flex-direction: column; 
+       height: auto;
     }
     .banner:before{
         display: none;
@@ -498,6 +503,10 @@ align-items: center;
 
     .textbox2{
         max-width: 100%;
+    }
+
+    .textbox2 h2{
+        text-align: center;
     }
 
     #where{
