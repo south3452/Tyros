@@ -79,28 +79,23 @@ ul, ol, li{
 
 .banner{
     height: 100vh;
+    overflow: hidden;
+    justify-content: flex-end;
 }
 
-.banner:before{
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 400px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+.banner .fullvideo{
+    z-index: 0;
+    position: fixed;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    opacity: 0.2;
 }
 
-.banner video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.1;
-    pointer-events: none;
-}
 
 .banner .textbox{
     position: relative;
@@ -154,19 +149,6 @@ ul, ol, li{
 
 .banner .textbox a:hover{
     background-color: rgb(235, 202, 20);
-}
-
-.banner .Videobox{
-position: relative;
-background: #fff;
-margin-left: 40px;
-width: 100%;
-height: 400px;
-z-index: 1;  
-}
-
-.banner .Videobox video{
-    opacity: 1;
 }
 
 .goal{
@@ -238,6 +220,7 @@ z-index: 1;
     height: 50px;
     width: 100%;
     margin-top: 20px;
+    text-align: center;
 }
 
 .chat-box form .field:last-child{
@@ -540,13 +523,4 @@ align-items: center;
         left: 10px;
     }
 
-}
-
-
-
-@media (max-width: 500px){
-    .banner .Videobox{
-        width:100%;
-        height: 200px;
-    }
 }

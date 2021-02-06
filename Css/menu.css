@@ -1,6 +1,4 @@
-.wrap-menu{
-    background-color: #242424;
-}
+
 .wrap-menu a{
     cursor: pointer;
     color: #fff;
@@ -20,10 +18,13 @@
 }
 
 .menu-item{
-    border-bottom: 1px solid #ff801e;
     text-align: center;
     padding: 20px 15px;
     background-color: #313638;
+}
+
+.menu-item-close{
+    margin-top: 20px
 }
 
 .menu-item-action{

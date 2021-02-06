@@ -2,7 +2,10 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="./images/logo-short.png">
+
     <link rel="stylesheet" href="Css/styles.css">
     <link rel="stylesheet" href="Css/btnMenu.css">
     <link rel="stylesheet" href="css/menu.css">
@@ -15,44 +18,48 @@
     <title>Tyros</title>
 </head>
 <body class="center">
-        <nav class="wrap-menu">
-            <div class="btnMenu ">
-                <a class="btnMenu_open">Menu</a>
-                <ul class="menu-active">
-                    <li><a href="#faq">Sobre</a></li>
-                    <li><a href="index.html">O que fazemos?</a></li>
-                </ul>
-                <a href="index.html" class="center_header">TYROS</a>
-                <ul class="menu-active">
-                    <li><a href="index.html">FAQ</a></li>
-                    <li><a href="index.html">Contato</a></li>
+        <nav>
+            <div class="wrap-menu">
+                <div class="btnMenu ">
+                    <a class="btnMenu_open">Menu</a>
+                    <ul class="menu-active">
+                        <li><a href="#faq">Sobre</a></li>
+                        <li><a href="index.html">O que fazemos?</a></li>
+                    </ul>
+                    <a href="index.html" class="center_header">TYROS</a>
+                    <ul class="menu-active">
+                        <li><a href="index.html">FAQ</a></li>
+                        <li><a href="index.html">Contato</a></li>
+                    </ul>
+                </div>
+    
+                <ul id="menu" class="menu">
+                    <div>
+                        <li class="li_close"><a style="width:0" class="btnMenu_close">Sair</a></li>
+                    </div>
+                    <div class="menu-item-close">
+                        <li class="menu-item">
+                            <a href="#faq" class="menu-item-action menuClose">Sobre</a>
+                            </li>
+            
+                            <li class="menu-item">
+                                <a href="" class="menu-item-action menuClose">O que fazemos?</a>
+                            </li>
+            
+                            <li class="menu-item">
+                                <a href="" class="menu-item-action menuClose">FAQ</a>
+                            </li>
+            
+                            <li class="menu-item">
+                                <a href="" class="menu-item-action menuClose">Contato</a>
+                            </li>
+                    </div>
                 </ul>
             </div>
-
-            <ul id="menu" class="menu">
-                <div>
-                    <li class="li_close"><a style="width:0" class="btnMenu_close">Sair</a></li>
-                </div>
-                <li class="menu-item">
-                <a href="#faq" class="menu-item-action menuClose">Sobre</a>
-                </li>
-
-                <li class="menu-item">
-                    <a href="" class="menu-item-action menuClose">O que fazemos?</a>
-                </li>
-
-                <li class="menu-item">
-                    <a href="" class="menu-item-action menuClose">FAQ</a>
-                </li>
-
-                <li class="menu-item">
-                    <a href="" class="menu-item-action menuClose">Contato</a>
-                </li>
-            </ul>
         </nav>
     <div class="maxwidth center">
         <div class="banner container">
-            <video src="tech.mp4" muted autoplay loop type="mp4"></video>
+            <video class="fullvideo" src="capa-ty-test111.mp4" poster="./images/coverr1.jpg" autoplay loop muted type="video/mp4"></video>
             <div class="textbox">
                 <h2 id="titulo">Sobre a Tyros</h2>
                 <p>A Tyros é uma empresa que desenvolve soluções de TI como softwares, sites e infraestrutura para pessoas físicas e jurídicas, e por prezarmos pela empatia e compreensão de nossos clientes, disponibilizamos diversos tipos de planos que cabem no seu orçamento.</p>
@@ -61,10 +68,7 @@
                 <a href="#">Saiba mais</a>
                 <a id="where" href="#">Onde Estamos</a>
             </div>
-        
-            <div class="Videobox">
-                <video src="video.mp4" muted autoplay loop type="mp4"></video>
-            </div>
+    
         </div>
 
         <div id="faq" class="goal container">
@@ -154,12 +158,8 @@
         <script>
             //fazer o botão diminuir
             anime({
-                targets: '#butao ',
+                targets: '#butao',
                 width: '100px', // -> from '28px' to '100%',
-                translateX: {
-                    value: 120,
-                    duration: 1000
-                },
                 easing: 'linear',
                 loop: false,
                 begin: function(){
