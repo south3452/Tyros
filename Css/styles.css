@@ -51,8 +51,41 @@ ul, ol, li{
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    padding: 50px 100px;
+    padding: 30px 100px;
     gap: 30px;
+}
+
+.effect-under {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+  }
+  .effect-under:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 51%;
+	right: 51%;
+	bottom: 0;
+	background: #8a2be2;
+	height: 2px;
+	-webkit-transition-property: left, right;
+	transition-property: left, right;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+  }
+.effect-under:hover:before, .effect-under:focus:before, .effect-under:active:before {
+	left: 0;
+	right: 0;
+}
+.effect-under:hover{
+    color:#a454f0;
 }
 
 .whats{
