@@ -210,8 +210,28 @@
                     {translateX: 0},
                 ],
                 easing: 'easeOutElastic(2, .8)',
-                duration: 600
+                duration: 300
             });*/
+            function depois(){
+                anime({
+                    targets:'#logo',
+                    opacity: 0,
+                    easing: 'cubicBezier(0.625, 0.105, 0.750, 0.750)',
+                    complete: function(){
+                        anime.remove('#logo')
+                    },
+                    complete: function(){
+                        anime({
+                            targets:'#abc',
+                            opacity: 1,
+                            easing: 'cubicBezier(0.625, 0.105, 0.750, 0.750)'
+                        });
+                    }
+                });
+                
+            }
+
+            setTimeout(depois, 8000);
         // Não mexe aqui porra
         </script>
     </div>
