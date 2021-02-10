@@ -25,7 +25,8 @@
 
 html, body{
     background: #111;
-    width: 100%
+    width: 100%;
+    overflow-x: hidden;
 }
 
 ul, ol, li{
@@ -47,7 +48,6 @@ ul, ol, li{
 
 .container{
     position: relative;
-    background-attachment: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -120,13 +120,11 @@ ul, ol, li{
 .banner .fullvideo{
     z-index: 0;
     position: fixed;
-    width: auto;
-    height: auto;
-    min-width: 100%;
+    width: 100%;
     min-height: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
     opacity: 0.2;
 }
 
@@ -209,7 +207,7 @@ ul, ol, li{
 }
 
 .services{
-    background: #0A0F0D;
+    background:#f2b632;
 }
 
 .cards-container{
@@ -218,19 +216,14 @@ ul, ol, li{
     align-items: center;
     min-width: 1200px;
     flex-wrap: wrap;
-    padding: 40px 0;
 }
 
 .container .card{
     position: relative;
     width: 320px;
     height: 440px;
-    box-shadow: inset 5px 5px 5px rgba(0, 0, 0,0.05),
-                inset 5px 5px 5px rgba(255, 255, 255,0.5),
-                inset 5px 5px 5px rgba(0, 0, 0,0.05),
-                inset 5px 5px 5px rgba(255, 255, 255,0.5);
-                border-radius: 15px;
-                margin: 30px;
+    border-radius: 15px;
+    margin: 30px;
                 
 }
 
@@ -241,7 +234,7 @@ ul, ol, li{
     right: 20px;
     bottom: 20px;
     background: #ebf5fc;
-    box-shadow: 0 10px 20px rgbaa (0,0,0,0.1);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -250,8 +243,8 @@ ul, ol, li{
 }
 
 .container .card:hover .box{
-    transform: translateY(-50px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
     background: linear-gradient(45deg, #b95ce4, #4f29cd);
 }
 
@@ -604,6 +597,14 @@ align-items: center;
     }
     .faq .accordion{
         width: 100%
+    }
+
+    .services{
+        padding: 50px;
+        flex-direction: column;
+    }
+    .cards-container{
+        flex-direction: column;
     }
 
     .team{
