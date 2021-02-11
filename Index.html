@@ -292,13 +292,15 @@
                     </div>
 
                     <div class="field">
-                            <button type="submit" id="butao"><a id="abc">Enviar</a><img id="logo" src="images/logo.png"></img>
-                                <svg width="37" height="27" viewBox="0 0 37 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="line" d="M14.0861 26L36 1" stroke="black"/>
-                                    <line class="line" y1="-0.5" x2="18.9962" y2="-0.5" transform="matrix(0.741523 0.670928 -0.586056 0.81027 0 13.2549)" stroke="black"/>
-                                </svg>
-                            </button>
+                            <button type="submit" id="butao"><a id="abc">Enviar</a><img id="logo" src="images/logo.png"></img></button>
                     </div>
+
+                    <div class="field2">
+                        <svg width="37" height="25" viewBox="0 0 37 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="linha" d="M0.5 12L14 24L36 1" stroke="black" stroke-width="5" transform="scale(0.9)" rx="10" />
+                        </svg> 
+                    </div>
+
                 </form>      
             </div>
         </div>
@@ -371,16 +373,28 @@
                     },
                     complete: function(){
                         anime({
-                            targets:'.line',
-                            opacity: 1,
-                            easing: 'cubicBezier(0.625, 0.105, 0.750, 0.750)'
+                            targets:'#certo',
+                            translateX: 150,
+                            translateY: -20,
+
+
+                            complete: function(){
+                                anime({
+                                targets:'.linha',
+                                strokeDashoffset: [anime.setDashoffset, 0],
+                                opacity: 1,
+                                direction: 'alternate',
+                                easing: 'cubicBezier(0.625, 0.105, 0.750, 0.750)',
+                                loop: true
+                                });
+                            }
                         });
                     }
                 });
                 
             }
 
-            setTimeout(depois, 8000);
+            setTimeout(depois, 100);
         // Não mexe aqui porra
         </script>
     </div>

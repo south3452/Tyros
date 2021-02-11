@@ -419,6 +419,11 @@ form .textarea textarea:focus::placeholder{
     opacity: 0;
 }
 
+.field2{
+    position: absolute;
+    align-content: center;
+}
+
 .banner .sci{
 position: absolute;
 bottom: 20px;
@@ -560,6 +565,13 @@ align-items: center;
     align-content: center;
 }
 
+.linha{
+    opacity: 0;
+}
+
+#certo{
+    text-align: center;
+}
 
 /* RESPONSIVE */
 
