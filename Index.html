@@ -289,7 +289,12 @@
                     </div>
 
                     <div class="field">
-                            <button type="submit" id="butao"><a id="abc">Enviar</a><img id="logo" src="images/logo.png"></img></button>
+                            <button type="submit" id="butao"><a id="abc">Enviar</a><img id="logo" src="images/logo.png"></img>
+                                <svg width="37" height="27" viewBox="0 0 37 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="line" d="M14.0861 26L36 1" stroke="black"/>
+                                    <line class="line" y1="-0.5" x2="18.9962" y2="-0.5" transform="matrix(0.741523 0.670928 -0.586056 0.81027 0 13.2549)" stroke="black"/>
+                                </svg>
+                            </button>
                     </div>
                 </form>      
             </div>
@@ -363,7 +368,7 @@
                     },
                     complete: function(){
                         anime({
-                            targets:'#abc',
+                            targets:'.line',
                             opacity: 1,
                             easing: 'cubicBezier(0.625, 0.105, 0.750, 0.750)'
                         });
