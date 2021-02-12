@@ -13,7 +13,7 @@
 
     <script src="https://kit.fontawesome.com/5c13289023.js" crossorigin="anonymous"></script>
     <script src="Js/accordion.js" defer></script>
-    <script src="Js/anime.min.js"></script>
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
     <script src="Js/typewriter.js" async></script>
     <title>Tyros</title>
 </head>
@@ -292,7 +292,7 @@
                     </div>
 
                     <div class="field">
-                            <button type="submit" id="butao"><a id="abc">Enviar</a><img id="logo" src="images/logo.png"></img></button>
+                        <button type="submit" id="butao"><a id="abc">Enviar</a><img id="logo" src="images/logo.png"></img></button>
                     </div>
 
                     <div class="field2">
@@ -305,7 +305,7 @@
             </div>
         </div>
     
-        <script src="js/anime.min.js"></script>
+        <script ></script>
         <script>
             //fazer o botão diminuir
             anime({
@@ -375,9 +375,7 @@
                         });
                     },
                     complete: function(){
-                        anime.remove('#logo')
-                    },
-                    complete: function(){
+                        anime.remove('#logo');
                         anime({
                             targets:'.linha',
                             strokeDashoffset: [anime.setDashoffset, 0],

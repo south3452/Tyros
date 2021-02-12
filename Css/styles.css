@@ -426,6 +426,14 @@ form .textarea textarea:focus::placeholder{
     text-align: center;
 }
 
+.field2 svg path{
+    opacity: 0;
+}
+
+.field2 svg{
+    text-align: center;
+}
+
 .banner .sci{
 position: absolute;
 bottom: 20px;
@@ -565,14 +573,6 @@ align-items: center;
     position: absolute;
     transform: translate(0px , 4px);
     align-content: center;
-}
-
-.linha{
-    opacity: 0;
-}
-
-#certo{
-    text-align: center;
 }
 
 /* RESPONSIVE */
