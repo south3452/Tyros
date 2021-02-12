@@ -419,9 +419,11 @@ form .textarea textarea:focus::placeholder{
     opacity: 0;
 }
 
-.field2{
-    position: absolute;
-    align-content: center;
+.field2 {
+    margin-left: 18%;
+    margin-right: 15%;
+    position: relative;
+    text-align: center;
 }
 
 .banner .sci{

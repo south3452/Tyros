@@ -296,8 +296,8 @@
                     </div>
 
                     <div class="field2">
-                        <svg width="37" height="25" viewBox="0 0 37 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="linha" d="M0.5 12L14 24L36 1" stroke="black" stroke-width="5" transform="scale(0.9)" rx="10" />
+                        <svg id="certo" width="37" height="30" viewBox="0 0 37 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="linha" d="M3.0 12L14 22L33 1" stroke="green" stroke-width="5" stroke-linecap="round"/>
                         </svg> 
                     </div>
 
@@ -368,33 +368,29 @@
                     targets:'#logo',
                     opacity: 0,
                     easing: 'cubicBezier(0.625, 0.105, 0.750, 0.750)',
+                    begin: function(){
+                        anime({
+                            targets:'#certo',
+                            translateY: '-130%',
+                        });
+                    },
                     complete: function(){
                         anime.remove('#logo')
                     },
                     complete: function(){
                         anime({
-                            targets:'#certo',
-                            translateX: 150,
-                            translateY: -20,
-
-
-                            complete: function(){
-                                anime({
-                                targets:'.linha',
-                                strokeDashoffset: [anime.setDashoffset, 0],
-                                opacity: 1,
-                                direction: 'alternate',
-                                easing: 'cubicBezier(0.625, 0.105, 0.750, 0.750)',
-                                loop: true
-                                });
-                            }
+                            targets:'.linha',
+                            strokeDashoffset: [anime.setDashoffset, 0],
+                            opacity: 1,
+                            direction: 'linear',
+                            easing: 'cubicBezier(0.625, 0.105, 0.750, 0.750)'
                         });
                     }
                 });
                 
             }
 
-            setTimeout(depois, 100);
+            setTimeout(depois, 8000);
         // Não mexe aqui porra
         </script>
     </div>
