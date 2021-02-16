@@ -10,9 +10,5 @@ window.onload= function(){
         if(nome.value === '' || nome.value == null){
             window.alert('foi porra')
         }
-
-        if(messages.length > 0){
-            e.preventDefault()
-        }
     });
 }
