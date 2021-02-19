@@ -1,6 +1,8 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const nodemailer = require("nodemailer")
+// deixa essa linha aqui  
+const animacao = require("./public/Js/animation")
 const app = express()
 
 app.set('view engine','ejs')
