@@ -28,7 +28,7 @@ let transporter = nodemailer.createTransport({
 app.post("/sendEmail",(req,res) =>{
     const mailOption = {
         from: "CONTATO <tyrossoftwares@gmail.com>",
-        to: "wavetheproducerofc@gmail.com",
+        to: "hitallomoreira13@gmail.com",
         subject:"Nome:" + req.body.nome +" E-mail: " + req.body.email,
         text:"Texto do email",
         html: "Assunto: " + req.body.assunto + "<br>" + "Telefone: " + req.body.tel + "<br>" + req.body.texto
