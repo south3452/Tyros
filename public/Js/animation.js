@@ -8,4 +8,4 @@ var animacao = function(e){
 
 }
 
-module.exports(animacao)
+module.exports = animacao;
