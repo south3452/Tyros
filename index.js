@@ -28,9 +28,10 @@ let transporter = nodemailer.createTransport({
 })
 
 app.post("/sendEmail",(req,res) =>{
+    animacao(0)    
     const mailOption = {
         from: "CONTATO <tyrossoftwares@gmail.com>",
-        to: "hitallomoreira13@gmail.com",
+        to: "mohamed.santosabreu@gmail.com",
         subject:"Nome:" + req.body.nome +" E-mail: " + req.body.email,
         text:"Texto do email",
         html: "Assunto: " + req.body.assunto + "<br>" + "Telefone: " + req.body.tel + "<br>" + req.body.texto
@@ -39,6 +40,7 @@ app.post("/sendEmail",(req,res) =>{
         if(err)
             console.log(err)
         else
+            animacao(1)
             console.log("ENVIADO");
     })
 })
