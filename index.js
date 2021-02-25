@@ -1,13 +1,13 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const nodemailer = require("nodemailer")
-// deixa essa linha aqui  
-//const animacao = require("./public/Js/animation")
 const app = express()
 
 app.set('view engine','ejs')
 
 app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/teste'))
+
 
 app.use(bodyParser.urlencoded({
     extended: false
@@ -40,7 +40,8 @@ app.post("/",(req,res) =>{
         if(err)
             console.log(err)
         else
-            ///animacao(1)
+            //animacao(1)
+            //app.use(express.static(__dirname + 'animation2.js'))
             console.log("ENVIADO");
     })
 })
