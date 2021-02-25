@@ -2,7 +2,7 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const nodemailer = require("nodemailer")
 // deixa essa linha aqui  
-const animacao = require("./public/Js/animation")
+//const animacao = require("./public/Js/animation")
 const app = express()
 
 app.set('view engine','ejs')
@@ -27,8 +27,8 @@ let transporter = nodemailer.createTransport({
     }
 })
 
-app.post("/sendEmail",(req,res) =>{
-    animacao(0)    
+app.post("/",(req,res) =>{  
+    //animacao(0)
     const mailOption = {
         from: "CONTATO <tyrossoftwares@gmail.com>",
         to: "mohamed.santosabreu@gmail.com",
@@ -40,13 +40,13 @@ app.post("/sendEmail",(req,res) =>{
         if(err)
             console.log(err)
         else
-            animacao(1)
+            ///animacao(1)
             console.log("ENVIADO");
     })
 })
 
 app.get("/",(req,res) => {
-    res.sendFile(__dirname + "/views/index.html")
+    res.sendFile(__dirname + "/views/Index.html")
 })
 
 app.listen(3000,()=>{
