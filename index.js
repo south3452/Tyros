@@ -6,7 +6,7 @@ const app = express()
 app.set('view engine','ejs')
 
 app.use(express.static(__dirname + '/public'))
-app.use(express.static(__dirname + '/teste'))
+
 
 
 app.use(bodyParser.urlencoded({
@@ -29,6 +29,7 @@ let transporter = nodemailer.createTransport({
 
 app.post("/",(req,res) =>{  
     //animacao(0)
+    app.use('/teste', express.static(__dirname + '/teste'))
     const mailOption = {
         from: "CONTATO <tyrossoftwares@gmail.com>",
         to: "mohamed.santosabreu@gmail.com",
@@ -42,6 +43,7 @@ app.post("/",(req,res) =>{
         else
             //animacao(1)
             //app.use(express.static(__dirname + 'animation2.js'))
+            res.end('/')
             console.log("ENVIADO");
     })
 })
