@@ -1,5 +1,46 @@
-const anime = require('animejs')
+/*const anime = require('animejs')
+const nodemailer = require("nodemailer")
+const nome = document.querySelector('#name')
+const email = document.querySelector('#email')
+const tel = document.querySelector('#tel')
+const ass = document.querySelector('#Assunto')
+const texto = document.querySelector('#text')
+const form = document.querySelector('#envioemail')
 
+
+
+let transporter = nodemailer.createTransport({
+    host:"smtp.gmail.com",
+    port:587,
+    secure: false,
+    auth:{
+        user: "tyrossoftwares@gmail.com",
+        pass: "niviadino"
+    },
+    tls: {
+        rejectUnauthorized: false
+    }
+})
+
+
+
+form.addEventListener('submit', el => {
+    el.preventDefault()
+    animacao(0)
+    const mailOption = {
+        from: "CONTATO <tyrossoftwares@gmail.com>",
+        to: "mohamed.santosabreu@gmail.com",
+        subject:"Nome:" + nome +" E-mail: " + email,
+        text:"Texto do email",
+        html: "Assunto: " + ass + "<br>" + "Telefone: " + tel + "<br>" + texto
+    }
+    transporter.sendMail(mailOption, function(err, info){
+        if(err)
+            console.log(err)
+        else
+            console.log("ENVIADO");
+    })
+})
 
 const animacao = function(e){
     if(e === 0){
@@ -57,10 +98,10 @@ const animacao = function(e){
                     });
                 },
                 complete: function(){
-                    anime.remove('#logo');
+                    remove('#logo');
                     anime({
                         targets:'.linha',
-                        strokeDashoffset: [anime.setDashoffset, 0],
+                        strokeDashoffset: [setDashoffset, 0],
                         opacity: 1,
                         direction: 'linear',
                         easing: 'cubicBezier(0.625, 0.105, 0.750, 0.750)'
@@ -70,4 +111,4 @@ const animacao = function(e){
     }
 }
 
-module.exports = animacao;
+module.exports = animacao;*/
