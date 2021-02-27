@@ -27,9 +27,21 @@ let transporter = nodemailer.createTransport({
     }
 })
 
-app.post("/",(req,res) =>{  
+ /* To estudando um jeito do anime dar certo deixa aqui plz
+app.use("/", function (req, res, next){
+    if(app.get('/')){
+        console.log('Foi o get')
+        app.use('/teste', express.static(__dirname + '/teste'))
+        next()
+    }else if(app.post('/')){
+        console.log('Foi o POST')
+        next()
+    }
+    next()
+})*/
+
+app.get("/",(req,res) =>{  
     //animacao(0)
-    app.use('/teste', express.static(__dirname + '/teste'))
     const mailOption = {
         from: "CONTATO <tyrossoftwares@gmail.com>",
         to: "mohamed.santosabreu@gmail.com",
