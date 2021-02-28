@@ -27,38 +27,31 @@ let transporter = nodemailer.createTransport({
     }
 })
 
- /* To estudando um jeito do anime dar certo deixa aqui plz
-app.use("/", function (req, res, next){
-    if(app.get('/')){
-        console.log('Foi o get')
-        app.use('/teste', express.static(__dirname + '/teste'))
-        next()
-    }else if(app.post('/')){
-        console.log('Foi o POST')
-        next()
-    }
-    next()
-})*/
+// To estudando um jeito do anime dar certo deixa aqui plz
+var teste = function (req, res, next){
+        const mailOption = {
+            from: "CONTATO <tyrossoftwares@gmail.com>",
+            to: "mohamed.santosabreu@gmail.com",
+            subject:"Nome:" + req.body.nome +" E-mail: " + req.body.email,
+            text:"Texto do email",
+            html: "Assunto: " + req.body.assunto + "<br>" + "Telefone: " + req.body.tel + "<br>" + req.body.texto
+        }
 
-app.get("/",(req,res) =>{  
-    //animacao(0)
-    const mailOption = {
-        from: "CONTATO <tyrossoftwares@gmail.com>",
-        to: "mohamed.santosabreu@gmail.com",
-        subject:"Nome:" + req.body.nome +" E-mail: " + req.body.email,
-        text:"Texto do email",
-        html: "Assunto: " + req.body.assunto + "<br>" + "Telefone: " + req.body.tel + "<br>" + req.body.texto
-    }
-    transporter.sendMail(mailOption, function(err, info){
-        if(err)
-            console.log(err)
-        else
-            //animacao(1)
-            //app.use(express.static(__dirname + 'animation2.js'))
-            res.end('/')
-            console.log("ENVIADO");
-    })
-})
+        transporter.sendMail(mailOption, function(err, info){
+            if(err)
+                console.log(err)
+            else
+                console.log("ENVIADO");
+        })
+    next()
+}
+
+var rodar = function(){ app.use('/teste', express.static(__dirname + '/teste')) }
+
+app.post('/', [teste, (req, res) =>{
+    rodar
+    res.get('Content-Type')
+}])
 
 app.get("/",(req,res) => {
     res.sendFile(__dirname + "/views/Index.html")
