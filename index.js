@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({
     extended: false
 }))
+app.use(express.json())
 app.use(bodyParser.json())
 
 let transporter = nodemailer.createTransport({
@@ -28,7 +29,7 @@ let transporter = nodemailer.createTransport({
 })
 
 // To estudando um jeito do anime dar certo deixa aqui plz
-var teste = function (req, res, next){
+var enviaremail = function (req, res, next){
         const mailOption = {
             from: "CONTATO <tyrossoftwares@gmail.com>",
             to: "mohamed.santosabreu@gmail.com",
@@ -46,15 +47,31 @@ var teste = function (req, res, next){
     next()
 }
 
-var rodar = function(){ app.use('/teste', express.static(__dirname + '/teste')) }
-
-app.post('/', [teste, (req, res) =>{
-    res.status 
-    
-}])
+//var rodar = function(){ app.use('/teste', express.static(__dirname + '/teste')) }
 
 app.get("/",(req,res) => {
     res.sendFile(__dirname + "/views/Index.html")
+})
+
+app.post('/', (req, res) => {
+    console.log(req.body)
+    
+    const mailOption = {
+        from: "CONTATO <tyrossoftwares@gmail.com>",
+        to: "mohamed.santosabreu@gmail.com",
+        subject:"Nome:" + req.body.nome +" E-mail: " + req.body.email,
+        text:"Texto do email",
+        html: "Assunto: " + req.body.assunto + "<br>" + "Telefone: " + req.body.tel + "<br>" + req.body.texto
+    }
+
+    transporter.sendMail(mailOption, function(err, info){
+        if(err)
+            console.log(err)
+        else
+            console.log("ENVIADO");
+    })
+
+    res.send('teste')
 })
 
 app.listen(3000,()=>{
