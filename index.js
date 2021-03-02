@@ -49,8 +49,8 @@ var teste = function (req, res, next){
 var rodar = function(){ app.use('/teste', express.static(__dirname + '/teste')) }
 
 app.post('/', [teste, (req, res) =>{
-    rodar
-    res.get('Content-Type')
+    res.status 
+    
 }])
 
 app.get("/",(req,res) => {
