@@ -11,7 +11,7 @@ contactform.addEventListener('submit', (e) => {
     let formdata ={
         nome: nome.value,
         email: email.value,
-        telefone: tel.value,
+        tel: tel.value,
         assunto: ass.value,
         texto: texto.value,
     }

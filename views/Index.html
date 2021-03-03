@@ -10,16 +10,15 @@
     <link rel="stylesheet" href="Css/btnMenu.css">
     <link rel="stylesheet" href="Css/menu.css">
     <link rel="stylesheet" href="Css/footer.css">
+    <link  rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
     <script src="https://kit.fontawesome.com/5c13289023.js" crossorigin="anonymous"></script>
     <script src="Js/accordion.js" defer></script>
     <script src="Js/typewriter.js" async></script>
 
-      
-    
     <title>Tyros</title>
 </head>
-<body class="center">
+<body class="center" data-aos-easing="slide" data-aos-duration="1000" data-aos-delay="0">
         <nav>
             <div class="wrap-menu">
                 <div class="btnMenu ">
@@ -63,7 +62,7 @@
     <div class="maxwidth center">
         <div class="banner container">
             <img src="Videos/giftyros.gif" class="fullvideo">
-            <div class="textbox">
+            <div class="textbox" data-aos="fade-up">
                 <h2 id="titulo">Sobre a Tyros</h2>
                 <p>A Tyros é uma empresa que desenvolve soluções de TI como softwares, sites e infraestrutura para pessoas físicas e jurídicas, e por prezarmos pela empatia e compreensão de nossos clientes, disponibilizamos diversos tipos de planos que cabem no seu orçamento.</p>
                 
@@ -75,10 +74,10 @@
         </div>
 
         <div id="fazemos" class="goal container">
-            <div class="textbox2">
+            <div class="textbox2" data-aos="fade-right">
             <h2>O que fazemos</h2>
             </div>
-            <div class="textbox2">
+            <div class="textbox2" data-aos="fade-up">
                 <p>Desenvolvemos sites e sistemas de acordo com a necessidade de nossos clientes.
                     Sempre alinhando o que você precisa com a melhor estratégia, e assim apresentamos todo escopo do projeto e o seu orçamento.
                 </p>
@@ -96,11 +95,11 @@
         </div>
 
         <div id="servicos" class="services container">
-            <div class="textbox2">
+            <div class="textbox2" data-aos="fade-right">
             <h2>Serviços</h2>
             </div>
             <div class="cards-container">
-                <div class="card">
+                <div class="card" data-aos="flip-left" data-aos-duration="1500">
                     <div class="box">
                         <div class="content">
                             <div class="title-card">
@@ -115,7 +114,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="flip-right" data-aos-duration="1500">
                     <div class="box">
                         <div class="content">
                             <div class="title-card">
@@ -130,7 +129,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="flip-left" data-aos-duration="1500">
                     <div class="box">
                         <div class="content">
                             <div class="title-card">
@@ -144,7 +143,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="flip-right" data-aos-duration="1500">
                     <div class="box">
                         <div class="content">
                             <div class="title-card">
@@ -165,25 +164,25 @@
         </div>
 
     <div id="equipe" class="team container">
-        <div class="textbox2">
+        <div class="textbox2" data-aos="fade-right">
             <h2>Nossa Equipe</h2>
         </div>
         <div class="person">
-            <div class="text-img">
+            <div class="text-img" data-aos="fade-right" data-aos-duration="1500">
                 <span class="circle">
                     <img src="images/moreira.jpg" alt="ADVOGADO PALOMA">
                 </span>
                 <h2>Hitallo Moreira - CTO</h2>
                 <p>Desenvolvedor WEB formado em Harvard e no MIT</p>
             </div>
-            <div class="text-img">
+            <div class="text-img" data-aos="fade-right" data-aos-duration="1500"> 
                 <span class="circle">
                     <img src="images/luquinhas.jpg" alt="ADVOGADO PALOMA">
                 </span>
                 <h2>Mohamed dos Santos - CEO</h2>
                 <p>Empresário desde que nasceu, Desenvolvedor WEB e BackEnd formado pelo Enildo</p>
             </div>
-            <div class="text-img">
+            <div class="text-img" data-aos="fade-right" data-aos-duration="1500">
                 <span class="circle">
                     <img src="images/advogado.jpg" alt="ADVOGADO PALOMA">
                 </span>
@@ -193,8 +192,8 @@
         </div>
     </div>
     <div id="faq" class="faq container">
-        <div class="textbox2"><h2>FAQ</h2><p>Perguntas Frequentes</p></div>
-        <div class="accordion">
+        <div class="textbox2" data-aos="fade-right"><h2>FAQ</h2><p>Perguntas Frequentes</p></div>
+        <div class="accordion" data-aos="fade-up">
                 <!-- menu 1 --> 
                 <div class="accordion-item">
                     <div class="accordion-item-header">
@@ -287,12 +286,12 @@
         </div>
     </div>
     <div id="contato" class="contact container">
-        <div class="textbox2">
+        <div class="textbox2" data-aos="fade-right">
             <h2>Contato</h2>
             <p>Entre em contato conosco para fazer o seu orçamento ou tirar dúvidas, nossa equipe entrará em contato de volta em até 1 hora</p>
         </div>
         
-        <div class="wrapper">
+        <div class="wrapper" data-aos="fade-up" data-aos-duration="1500">
             <div class="head-text">Formulário para contato</div>
             <div class="chat-box">
                 <div class="desc-text">Por favor certifique-se que todos os campos estão preenchidos antes de enviar.</div>
@@ -483,9 +482,14 @@
         </div>
       </footer>
       <script src="Js/animation.js"></script>
+      <script src = "https://unpkg.com/aos@next/dist/aos.js"></script> 
+      <script> 
+        AOS.init(); 
+      </script>
 </body>
 <script src='https://codepen.io/juliangarnier/pen/75efae7724dbc3c055e918057fc4aca5.js'></script> 
 <!--<script src="teste/animation.js"></script>-->
+
 <script src="Js/btnMenu.js"></script>
 <script src="Js/jquery.js"></script>
 <script>
