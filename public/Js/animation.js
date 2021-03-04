@@ -4,10 +4,17 @@ let email = document.getElementById('email')
 let tel = document.getElementById('tel')
 let ass = document.getElementById('Assunto')
 let texto = document.getElementById('text')
+let botao = document.getElementById('butao')
 
 
 contactform.addEventListener('submit', (e) => {
-    e.preventDefault();
+    
+    e.preventDefault()
+    
+    comecar()
+    
+    $('#butao').prop("disabled", true);
+    
     let formdata ={
         nome: nome.value,
         email: email.value,
@@ -22,8 +29,6 @@ contactform.addEventListener('submit', (e) => {
     xrh.onload = function(){
         console.log(xrh.responseText);
         if (xrh.responseText = 'succes'){
-            comecar()
-            
             nome.value = ''
             email.value = ''
             tel.value = ''
@@ -37,13 +42,12 @@ contactform.addEventListener('submit', (e) => {
     xrh.send(JSON.stringify(formdata));
 
     xrh.onreadystatechange = function(){
-        
+        console.log(xrh.readyState)
         if(xrh.readyState === 4) {
             setTimeout(terminar, 8000)
         } else {
             console.log('Ainda não foi')
         }
-        
     };
 
     

@@ -47,10 +47,11 @@ app.post('/', (req, res) => {
         if(err)
             console.log(err)
         else
-            console.log("ENVIADO");
+            res.send("ENVIADO");
+            console.log("ENVIADO")
     })
 
-    res.send('teste')
+    
 })
 
 app.listen(3000,()=>{
