@@ -7,7 +7,7 @@
   }
   *::-webkit-scrollbar-thumb {
     border-radius: 20px;
-    background-color: #8a2be2;
+    background-color: #7209b7;
   }
   body::-webkit-scrollbar-thumb{
       border: 1px solid;
@@ -74,7 +74,7 @@ ul, ol, li{
 	left: 51%;
 	right: 51%;
 	bottom: 0;
-	background: #8a2be2;
+	background: #7209b7;
 	height: 2px;
 	-webkit-transition-property: left, right;
 	transition-property: left, right;
@@ -88,7 +88,7 @@ ul, ol, li{
 	right: 0;
 }
 .effect-under:hover{
-    color:#a454f0;
+    color:#920eeb;
 }
 
 .whats{
@@ -182,7 +182,7 @@ ul, ol, li{
 }
 
 .banner #where:hover{
-    background-color: #6f05be;
+    background-color: #7209b7;
 }
 
 .banner .textbox a:hover{
@@ -190,8 +190,7 @@ ul, ol, li{
 }
 
 .goal{
-    background-color: #4B0082;
-    
+    background: linear-gradient(45deg,#4b196b, #6e1fa1 );
  }
  
 
@@ -212,13 +211,13 @@ ul, ol, li{
     margin: 5px 0 25px;
 }
 
-.services, .team, .contact{
+.services, .responsabilities, .contact{
     background: url(../images/background.png) no-repeat center / cover;
     background-attachment: fixed;
 
 }
 
-.cards-container{
+.cards-container,.person{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -234,11 +233,9 @@ ul, ol, li{
                 
 }
 
-.container .card .box{
+.container .card .box,.container .person .card .text-img{
     position: absolute;
     top: 20px;
-    left: 20px;
-    right: 20px;
     bottom: 20px;
     background: #ebf5fc;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
@@ -247,14 +244,15 @@ ul, ol, li{
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    width:100%
 }
 
-.container .card:hover .box{
+.container .card .box:hover, .container .person .card .text-img:hover{
     transform: translateY(-20px);
-    background: linear-gradient(45deg, #b95ce4, #4f29cd);
+    background: linear-gradient(45deg,#4b196b, #6e1fa1 );
 }
 
-.container .card .box .content{
+.container .card .box .content, .container .card .text-img .content{
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -264,28 +262,19 @@ ul, ol, li{
     gap:15px;
 }
 
-.container .card .box .content h2{
-    position: absolute;
-    top: -10px;
-    right: 30px;
-    font-size: 8em;
-    color: rgba(0, 0, 0, 0.02);
-    transition: 0.5s;
-    pointer-events: none;
-}
-
-.container .card:hover .box .content h2{
+.container .card .box:hover .content h2, .container .card .text-img:hover .content h2{
     color: rgba(0, 0, 0, 0.05);
 }
 
-.container .card .box .content h3{
-    font-size: 1.8em;
+.container .card .box .content h2, .container .card .text-img .content h2{
     color: #777;
     z-index: 1;
     transition: 0.5s;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-.container .card .box .content p{
+.container .card .box .content p, .container .card .text-img .content p{
     font-size: 1em;
     font-weight: 300;
     color: #777;
@@ -293,26 +282,12 @@ ul, ol, li{
     transition: 0.5s;
 }
 
-.container .card:hover .box .content h3,
-.container .card:hover .box .content p{
+.container .card .box:hover .content h2,
+.container .card .box:hover .content p, .container .card .text-img:hover .content h2, .container .card .text-img:hover .content p{
     color: #fff;
 }
-
-.container .card .box .content a{
-    position: relative;
-    display: inline-block;
-    padding: 8px 20px;
-    background: #03a9f4;
-    margin-top: 15px;
-    border-radius: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 400;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.mission{
-    background:#6f05be;
+.container .card .box:hover .content h2:after ,.container .card .text-img:hover .content h2:after{
+    background: #fff
 }
 
 .wrapper{
@@ -333,7 +308,7 @@ ul, ol, li{
     padding: 0 20px;
     font-weight: 500;
     font-size: 20px;
-    background: -webkit-linear-gradient(left, #4B0082 ,#6b1e80);
+    background: linear-gradient(45deg,#4b196b, #6e1fa1 );
     text-align: center;
 }
 
@@ -383,7 +358,7 @@ form .textarea textarea{
 
 form .field input:focus,
 form .textarea textarea:focus{
-    border-color: #fc83bb;
+    border-color: #6b1e80;
 }
 
 form .field input::placeholder,
@@ -416,12 +391,12 @@ form .textarea textarea:focus::placeholder{
     color: #fff;
     font-size: 18px;
     font-weight: 500;
-    background: -webkit-linear-gradient(left, #4B0082 ,#6b1e80);
+    background-color: #7209b7;
     transition: all 0.3s ease;
 }
 
 .chat-box form .field button:hover{
-    background: -webkit-linear-gradient(left, #8115c4, #b626d3)
+    background-color: #5e0fa8
 }
 
 .chat-box form .field button:focus:active{
@@ -479,7 +454,7 @@ align-items: center;
 }
 
 .faq{
-    background-color: #4B0082;
+    background: linear-gradient(45deg,#4b196b, #6e1fa1 );
 }
 
 
@@ -535,39 +510,43 @@ align-items: center;
     border-top: 1px solid;
 }
 
-.team{
-    background-color: #0b7062;
+.responsabilities{
     color: #fff;
 }
-.team .textbox{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.circle{
-    display: inline-block;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-}
-.person{
+/* .person{
     display: flex;
     gap: 70px;
-}
-
+} */
+/* 
 .text-img{
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     text-align: center;
-    gap: 15px
+    gap: 15px;
+    background: #ebf5fc;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    color: #777;
+    padding: 20px
+} */
+
+.text-img h2, .card .box .content h2{
+    position:relative;
 }
 
-.contact{
-    background-color:#e66b1b;
+.text-img h2:after, .card .box .content h2:after{
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 35px;
+    height: 2px;
+    background: #777;
+    margin: 0 auto;
 }
+
 
 #titulo::after{
     content: '|';
@@ -637,7 +616,7 @@ align-items: center;
         flex-direction: column;
     }
 
-    .team{
+    .responsabilities{
         padding: 50px;
         flex-direction: column;
     }
