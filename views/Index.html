@@ -40,12 +40,15 @@
                         <li class="li_close"><a style="width:0" class="btnMenu_close">Sair</a></li>
                     </div>
                     <div class="menu-item-close">
-                        <li class="menu-item">
-                            <a href="#objetivo" class="menu-item-action menuClose">Objetivos</a>
-                            </li>
-            
                             <li class="menu-item">
                                 <a href="#fazemos" class="menu-item-action menuClose">O que fazemos?</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#servicos" class="menu-item-action menuClose">Serviços</a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="#objetivo" class="menu-item-action menuClose">Objetivos</a>
                             </li>
             
                             <li class="menu-item">
@@ -64,11 +67,10 @@
             <img src="Videos/giftyros.gif" class="fullvideo">
             <div class="textbox" data-aos="fade-up">
                 <h2 id="titulo">Sobre a Tyros</h2>
-                <p>A Tyros é uma empresa que desenvolve soluções de TI como softwares, sites e infraestrutura para pessoas físicas e jurídicas, e por prezarmos pela empatia e compreensão de nossos clientes, disponibilizamos diversos tipos de planos que cabem no seu orçamento.</p>
-                
-
-                <a href="#">Saiba mais</a>
-                <a id="where" href="#">Entrar em contato</a>
+                <p>A Tyros é uma empresa que desenvolve soluções de TI como softwares, 
+                    sites e infraestrutura para pessoas físicas e jurídicas, e por prezarmos pela empatia e compreensão 
+                    de nossos clientes, disponibilizamos diversos tipos de planos que cabem no seu orçamento.</p>
+                <a id="where" href="#contato">Entrar em contato</a>
             </div>
     
         </div>
@@ -478,7 +480,7 @@
           <center>
             <div class="credit">
               <span>Desenvolvido por: <a>Tyros</a> | 
-              <span class="far fa-copyright"></span> <span>2020 Todos os direitos reservados.</span>
+              <span class="far fa-copyright"></span> <span>2021 Todos os direitos reservados.</span>
               </span>
             </div>
           </center>
@@ -487,7 +489,9 @@
       <script src="Js/animation.js"></script>
       <script src = "https://unpkg.com/aos@next/dist/aos.js"></script> 
       <script> 
-        AOS.init(); 
+        AOS.init({
+            once:true
+        }); 
       </script>
 </body>
 <script src='https://codepen.io/juliangarnier/pen/75efae7724dbc3c055e918057fc4aca5.js'></script> 

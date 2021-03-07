@@ -33,8 +33,21 @@ ul, ol, li{
     list-style: none;
 }
 
-.nav-links a{
+.nav-links a, .banner .textbox h2,.banner .textbox p,.banner #where,
+.textbox2 h2, .textbox2 p,.container .card .box:hover .content h2,
+.container .card .box:hover .content p, .container .card .text-img:hover .content h2,
+.container .card .text-img:hover .content p,.wrapper .head-text,.chat-box form .field button,
+.accordion-item, .responsabilities{
     color: #fff;
+}
+
+.effect-under:before, .banner #where:hover, .chat-box form .field button{
+    background-color: #7209b7;
+}
+
+.goal, .container .card .box:hover, .container .person .card .text-img:hover,
+.wrapper .head-text, .faq{
+    background: linear-gradient(45deg,#4b196b, #6e1fa1 );
 }
 
 .center{
@@ -74,7 +87,6 @@ ul, ol, li{
 	left: 51%;
 	right: 51%;
 	bottom: 0;
-	background: #7209b7;
 	height: 2px;
 	-webkit-transition-property: left, right;
 	transition-property: left, right;
@@ -119,6 +131,7 @@ ul, ol, li{
     justify-content: flex-end;
     flex-direction: row;
     text-align: start;
+    display:block;
 }
 
 .banner .fullvideo{
@@ -139,31 +152,17 @@ ul, ol, li{
     position: relative;
     max-width: 550px;
     z-index: 0;
+    float:right;
+    padding: 30px
 }
 
-.banner .textbox h2{
-    color: #fff;
+.banner .textbox h2, .textbox2 h2{
     font-size: 3em;
 }
 
-.banner .textbox p{
-    color: #fff;
-    font-size: 1.1em;
+.banner .textbox p, .textbox2 p{
+    font-size: 1em;
     margin: 5px 0 25px;
-}
-
-.banner .textbox a{
-    position: relative;
-    display: inline-block;
-    background: #fff;
-    color: #111;
-    padding: 15px 25px;
-    text-decoration: none;
-    font-size: 1.1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 500;
-    transition: 0.2s;
 }
 
 .banner #where{
@@ -171,44 +170,19 @@ ul, ol, li{
     display: inline-block;
     background: transparent;
     border: 1px solid white;
-    color: #fff;
-    padding: 15px 25px;
+    padding: 15px;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
     transition: 0.2s;
 }
 
-.banner #where:hover{
-    background-color: #7209b7;
-}
-
-.banner .textbox a:hover{
-    background-color: rgb(235, 202, 20);
-}
-
-.goal{
-    background: linear-gradient(45deg,#4b196b, #6e1fa1 );
- }
- 
-
 .textbox2{
     position: relative;
     max-width: 550px;
     z-index: 2;
-}
-
- .textbox2 h2{
-    color: #fff;
-    font-size: 3em;
-}
-
- .textbox2 p{
-    color: #fff;
-    font-size: 1.1em;
-    margin: 5px 0 25px;
 }
 
 .services, .responsabilities, .contact{
@@ -247,11 +221,6 @@ ul, ol, li{
     width:100%
 }
 
-.container .card .box:hover, .container .person .card .text-img:hover{
-    transform: translateY(-20px);
-    background: linear-gradient(45deg,#4b196b, #6e1fa1 );
-}
-
 .container .card .box .content, .container .card .text-img .content{
     display: flex;
     flex-direction: column;
@@ -260,10 +229,6 @@ ul, ol, li{
     height: 100%;
     width: 100%;
     gap:15px;
-}
-
-.container .card .box:hover .content h2, .container .card .text-img:hover .content h2{
-    color: rgba(0, 0, 0, 0.05);
 }
 
 .container .card .box .content h2, .container .card .text-img .content h2{
@@ -282,14 +247,6 @@ ul, ol, li{
     transition: 0.5s;
 }
 
-.container .card .box:hover .content h2,
-.container .card .box:hover .content p, .container .card .text-img:hover .content h2, .container .card .text-img:hover .content p{
-    color: #fff;
-}
-.container .card .box:hover .content h2:after ,.container .card .text-img:hover .content h2:after{
-    background: #fff
-}
-
 .wrapper{
     background: #fff;
     max-width: 400px;
@@ -303,12 +260,10 @@ ul, ol, li{
 
 .wrapper .head-text{
     line-height: 60px;
-    color: #fff;
     border-radius: 10px 10px 0 0;
     padding: 0 20px;
     font-weight: 500;
     font-size: 20px;
-    background: linear-gradient(45deg,#4b196b, #6e1fa1 );
     text-align: center;
 }
 
@@ -352,7 +307,7 @@ form .textarea textarea{
     border: 1px solid lightgrey;
     outline: none;
     border-radius: 15px;
-    font-size: 16px;
+    font-size: 14px;
     transition: all 0.3s ease;
 }
 
@@ -378,9 +333,7 @@ form .textarea textarea:focus::placeholder{
 }
 
 .chat-box form .textarea textarea{
-    height: 100%;
     resize: none;
-    font-size: 16px;
 }
 
 .chat-box form .field button{
@@ -388,7 +341,6 @@ form .textarea textarea:focus::placeholder{
     border: none;
     cursor: pointer;
     outline: none;
-    color: #fff;
     font-size: 18px;
     font-weight: 500;
     background-color: #7209b7;
@@ -426,48 +378,15 @@ form .textarea textarea:focus::placeholder{
     text-align: center;
 }
 
-.banner .sci{
-position: absolute;
-bottom: 20px;
-letter-spacing: 35px;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.banner .sci {
-    list-style: none;
-}
-
-.banner .sci i{
-    display: inline-block;
-}
-
-.banner .sci li i{
- transform: scale(0.5);
- filter: invert(1);
- transition: 0.5s; 
-}
-
-.banner .sci  i:hover{
-   color: rgb(35, 83, 228);
-}
-
-.faq{
-    background: linear-gradient(45deg,#4b196b, #6e1fa1 );
-}
-
-
-
 .accordion{
     width: 1170px;
 }
 
 .accordion-item{
-    color: #fff;
     margin: 1rem 0;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25) ;
+    text-align: start;
 }
 
 .accordion-item-header{
@@ -486,7 +405,7 @@ align-items: center;
 
 .accordion-item-header::after{
     content: "\002B";
-    font-size: 2rem;
+    font-size: 1.3rem;
     position: absolute;
     right: 1rem;
 }
@@ -504,32 +423,12 @@ align-items: center;
 }
 
 .accordion-item-body-content{
-    background-color: #521945;
+    background-color: #6f05be;
     padding: 1rem;
     line-height: 1.5rem;
     border-top: 1px solid;
+    font-size: 15px;
 }
-
-.responsabilities{
-    color: #fff;
-}
-/* .person{
-    display: flex;
-    gap: 70px;
-} */
-/* 
-.text-img{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-    background: #ebf5fc;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-    color: #777;
-    padding: 20px
-} */
 
 .text-img h2, .card .box .content h2{
     position:relative;
@@ -575,10 +474,12 @@ align-items: center;
 @media (max-width: 1066px) 
 {
 
-    .banner{
+    .banner, .goal,.faq,.services,.responsabilities,.contact{
        padding: 50px;
        flex-direction: column; 
-       height: auto;
+    }
+    .banner{
+        height: auto;
     }
     .banner:before{
         display: none;
@@ -590,45 +491,22 @@ align-items: center;
     .banner .textbox h2{
         font-size: 2.5em;
     }
- 
-    .goal{
-        padding: 50px;
-        flex-direction: column; 
-    }
 
     .goal .textbox2 h2{
         font-size: 2.5em;
     }
 
-    .faq{
-        padding:50px;
-        flex-direction: column;
-    }
     .faq .accordion{
         width: 100%
     }
 
-    .services{
-        padding: 50px;
-        flex-direction: column;
-    }
     .cards-container{
-        flex-direction: column;
-    }
-
-    .responsabilities{
-        padding: 50px;
         flex-direction: column;
     }
 
     .person{
         flex-direction: column;
         gap:30px
-    }
-
-    .contact{
-        padding:50px;
-        flex-direction: column;
     }
 
     .textbox2{

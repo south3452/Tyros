@@ -21,13 +21,20 @@
 }
 
 .btnMenu_open, .btnMenu_close{
-  background-image: url(../images/bars-solid.svg);
   background-repeat: no-repeat;
   background-position: 10px center;
   text-indent: -9999px;
   padding: 5px 25px;
   display: none;
   z-index: 1;
+}
+
+.btnMenu_open{
+  background-image: url(../images/bars-solid.svg);
+}
+
+.btnMenu_close{
+  background-image: url(../images/close.svg);
 }
 
 .menu{
