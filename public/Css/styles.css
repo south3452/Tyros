@@ -24,7 +24,7 @@
 }
 
 html, body{
-    background: #111;
+    background: #4E1C5E;
     width: 100%;
     overflow-x: hidden;
 }
@@ -47,7 +47,8 @@ ul, ol, li{
 
 .goal, .container .card .box:hover, .container .person .card .text-img:hover,
 .wrapper .head-text, .faq{
-    background: linear-gradient(45deg,#4b196b, #6e1fa1 );
+    background: linear-gradient(
+        45deg,#4E1C5E, #8509af );
 }
 
 .center{
@@ -69,6 +70,7 @@ ul, ol, li{
     gap: 30px;
     flex-direction: column;
     text-align: center;
+    border-radius:20px
 }
 
 .effect-under {
@@ -134,19 +136,11 @@ ul, ol, li{
     display:block;
 }
 
-.banner .fullvideo{
+.logo{
+    position:fixed;
     z-index: 0;
-    position: fixed;
-    width: auto;
-    height:auto;
-    min-width: 100%;
-    min-height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.2;
+    width: 25%;
 }
-
 
 .banner .textbox{
     position: relative;
@@ -184,12 +178,12 @@ ul, ol, li{
     max-width: 550px;
     z-index: 2;
 }
-
+/* 
 .services, .responsabilities, .contact{
     background: url(../images/background.png) no-repeat center / cover;
     background-attachment: fixed;
 
-}
+} */
 
 .cards-container,.person{
     display: flex;
