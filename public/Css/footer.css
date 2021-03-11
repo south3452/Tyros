@@ -122,7 +122,7 @@ footer{
 }
 
 .center .content-2 .text{
-    font-size: 1.0625rem;
+    font-size: 0.9rem;
     font-weight: 500;
     padding-left: 10px;
 }
@@ -266,9 +266,14 @@ footer{
         width: 100%;
     }
     .left .content-2 .social a span{
-        height: 100px;
-        width: 100px;
-        line-height: 100px;
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+    .icons-social{
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
     }
     iframe{
         width:100%

@@ -130,23 +130,23 @@ ul, ol, li{
 .banner{
     height: 100vh;
     overflow: hidden;
-    justify-content: flex-end;
     flex-direction: row;
     text-align: start;
-    display:block;
 }
 
 .logo{
-    position:fixed;
+    position: relative;
     z-index: 0;
-    width: 25%;
+    min-width: 150px;
+    max-width: 250px;
+    width: 26%;
+    padding:30px 0
 }
 
 .banner .textbox{
     position: relative;
     max-width: 550px;
     z-index: 0;
-    float:right;
     padding: 30px
 }
 
@@ -384,7 +384,7 @@ form .textarea textarea:focus::placeholder{
 }
 
 .accordion-item-header{
-    background-color: #6f05be;
+    background-color: #9135B0;
     padding: 0.5rem 3rem 0.5rem 1rem;
     min-height: 3.5rem;
     line-height: 1.25rem;
@@ -417,7 +417,7 @@ form .textarea textarea:focus::placeholder{
 }
 
 .accordion-item-body-content{
-    background-color: #6f05be;
+    background-color: #8e32ad;
     padding: 1rem;
     line-height: 1.5rem;
     border-top: 1px solid;
@@ -468,20 +468,17 @@ form .textarea textarea:focus::placeholder{
 @media (max-width: 1066px) 
 {
 
-    .banner, .goal,.faq,.services,.responsabilities,.contact{
+    .banner, .goal,.faq,.services,.responsabilities,.contact,.person{
        padding: 50px;
        flex-direction: column; 
     }
-    .banner{
+    .banner, .textbox2, .textbox2 h2{
+        text-align: center;
         height: auto;
     }
     .banner:before{
         display: none;
     }
-    .banner .textbox{
-        max-width: 100%;
-    }
-
     .banner .textbox h2{
         font-size: 2.5em;
     }
@@ -501,11 +498,6 @@ form .textarea textarea:focus::placeholder{
     .person{
         flex-direction: column;
         gap:30px
-    }
-
-    .textbox2{
-        max-width: 100%;
-        text-align: center;
     }
 
     #where{
