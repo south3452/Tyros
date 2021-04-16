@@ -34,21 +34,50 @@ ul, ol, li{
 }
 
 .nav-links a, .banner .textbox h2,.banner .textbox p,.banner #where,
-.textbox2 h2, .textbox2 p,.container .card .box:hover .content h2,
-.container .card .box:hover .content p, .container .card .text-img:hover .content h2,
-.container .card .text-img:hover .content p,.wrapper .head-text,.chat-box form .field button,
+.textbox2 h2, .textbox2 p,.wrapper .head-text,.chat-box form .field button,
 .accordion-item, .responsabilities{
-    color: #fff;
+    color: #cccccc;
 }
 
-.effect-under:before, .banner #where:hover, .chat-box form .field button{
-    background-color: #7209b7;
+.chat-box form .field button{
+    background-color: #4E1C5E;
 }
 
-.goal, .container .card .box:hover, .container .person .card .text-img:hover,
-.wrapper .head-text, .faq{
+.effect-under:before{
+    background-color: #e0bd0d;
+}
+
+.banner #where:hover{
+    background-color: #185E19;
+}
+
+.goal{
     background: linear-gradient(
-        45deg,#4E1C5E, #8509af );
+        45deg,#4E1C5E, #58206B );
+} 
+
+.wrapper .head-text{
+    background: linear-gradient( 45deg,#9e6d18, #b87f1c );
+}
+
+.container .person .card .text-img:hover{
+       background: linear-gradient(
+        45deg,#074d97, #095DB8);
+}
+
+/* .goal{
+    background: linear-gradient(45deg, #0a3f77, #063D78)
+} */
+
+.container .card .box:hover{
+    background: linear-gradient(45deg, #e0bd0d,#f2b632)
+}
+
+.container .card .box:hover .content h2,
+.container .card .box:hover .content p, 
+.container .card .text-img:hover .content h2,
+.container .card .text-img:hover .content p{
+    color: rgb(255, 255, 255)
 }
 
 .center{
@@ -102,7 +131,7 @@ ul, ol, li{
 	right: 0;
 }
 .effect-under:hover{
-    color:#920eeb;
+    color:#e0bd0d;
 }
 
 .whats{
@@ -134,6 +163,15 @@ ul, ol, li{
     text-align: start;
 }
 
+.logo-text{
+    margin-top: -50px;
+    width: 100%;
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+    align-items: center; 
+}
+
 .logo{
     position: relative;
     z-index: 0;
@@ -155,7 +193,7 @@ ul, ol, li{
 }
 
 .banner .textbox p, .textbox2 p{
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 5px 0 25px;
 }
 
@@ -178,12 +216,6 @@ ul, ol, li{
     max-width: 550px;
     z-index: 2;
 }
-/* 
-.services, .responsabilities, .contact{
-    background: url(../images/background.png) no-repeat center / cover;
-    background-attachment: fixed;
-
-} */
 
 .cards-container,.person{
     display: flex;
@@ -242,7 +274,7 @@ ul, ol, li{
 }
 
 .wrapper{
-    background: #fff;
+    background: #cccccc;
     max-width: 400px;
     border-radius: 15px 15px 10px 10px;
     box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
@@ -278,7 +310,7 @@ ul, ol, li{
     padding: 10px 15px;
     margin: 20px 0;
     border-radius: 25px;
-    border: 1px solid lightgray;
+    border: 1px solid #7f7f88;
 }
 
 .chat-box form .field{
@@ -298,11 +330,13 @@ form .textarea textarea{
     width: 100%;
     height: 100%;
     padding: 10px;
-    border: 1px solid lightgrey;
+    border: 1px solid #7f7f88;
     outline: none;
     border-radius: 15px;
     font-size: 14px;
     transition: all 0.3s ease;
+    background: #cccccc;
+    color: #515365
 }
 
 form .field input:focus,
@@ -312,13 +346,13 @@ form .textarea textarea:focus{
 
 form .field input::placeholder,
 form .textarea textarea::placeholder{
-    color: silver;
+    color: #7f7f88;
     transition: all 0.3s ease;
 }
 
 form .field input:focus::placeholder,
 form .textarea textarea:focus::placeholder{
-    color: lightgray;
+    color: #b4b5bd;
 }
 
 .chat-box form .textarea {
@@ -337,7 +371,7 @@ form .textarea textarea:focus::placeholder{
     outline: none;
     font-size: 18px;
     font-weight: 500;
-    background-color: #7209b7;
+    background-color: #b87f1c;
     transition: all 0.3s ease;
 }
 
@@ -351,7 +385,7 @@ form .textarea textarea:focus::placeholder{
 
 .field img{
     max-width: 50px;
-    max-height: 50px;
+    padding: 6px;
     width: auto;
     height: auto;
     opacity: 0;
@@ -384,11 +418,10 @@ form .textarea textarea:focus::placeholder{
 }
 
 .accordion-item-header{
-    background-color: #9135B0;
+    background-color: #751d72;
     padding: 0.5rem 3rem 0.5rem 1rem;
     min-height: 3.5rem;
     line-height: 1.25rem;
-    font-weight: bold;
     display: flex;
     align-items: center;
     position: relative;
@@ -417,7 +450,7 @@ form .textarea textarea:focus::placeholder{
 }
 
 .accordion-item-body-content{
-    background-color: #8e32ad;
+    background-color: #82217D;
     padding: 1rem;
     line-height: 1.5rem;
     border-top: 1px solid;
@@ -459,7 +492,6 @@ form .textarea textarea:focus::placeholder{
 
 #abc{
     position: absolute;
-    transform: translate(0px , 4px);
     align-content: center;
 }
 
@@ -468,11 +500,17 @@ form .textarea textarea:focus::placeholder{
 @media (max-width: 1066px) 
 {
 
-    .banner, .goal,.faq,.services,.responsabilities,.contact,.person{
+    .banner,.logo-text, .goal,.faq,.services,.responsabilities,.person{
        padding: 50px;
        flex-direction: column; 
     }
-    .banner, .textbox2, .textbox2 h2{
+    .logo-text{
+        padding: 0
+    }
+    .contact{
+        padding:30px 15px
+    }
+    .banner,.logo-text, .textbox2, .textbox2 h2{
         text-align: center;
         height: auto;
     }

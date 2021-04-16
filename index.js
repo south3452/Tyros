@@ -1,19 +1,20 @@
 const express = require("express")
-const bodyParser = require("body-parser")
 const nodemailer = require("nodemailer")
 const app = express()
 
-app.set('view engine','ejs')
+app.use((req, res, next) => { //Cria um middleware onde todas as requests passam por ele 
+    if ((req.headers["x-forwarded-proto"] || "").endsWith("http")) //Checa se o protocolo informado nos headers é HTTP 
+        res.redirect(`https://${req.headers.host}${req.url}`); //Redireciona pra HTTPS 
+    else //Se a requisição já é HTTPS 
+        next(); //Não precisa redirecionar, passa para os próximos middlewares que servirão com o conteúdo desejado 
+});
 
 app.use(express.static(__dirname + '/public'))
 
-
-
-app.use(bodyParser.urlencoded({
+app.use(express.urlencoded({
     extended: false
 }))
 app.use(express.json())
-app.use(bodyParser.json())
 
 let transporter = nodemailer.createTransport({
     host:"smtp.gmail.com",
@@ -50,8 +51,6 @@ app.post('/', (req, res) => {
             res.send("ENVIADO");
             console.log("ENVIADO")
     })
-
-    
 })
 
 app.listen(3000,()=>{

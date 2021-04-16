@@ -44,7 +44,7 @@ contactform.addEventListener('submit', (e) => {
     xrh.onreadystatechange = function(){
         console.log(xrh.readyState)
         if(xrh.readyState === 4) {
-            setTimeout(terminar, 8000)
+            setTimeout(terminar, 4000)
         } else {
             console.log('Ainda não foi')
         }
