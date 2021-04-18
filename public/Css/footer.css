@@ -5,7 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 footer{
     position: relative;
     margin-bottom: 0;
@@ -52,7 +51,6 @@ footer{
     top: -10px;
 }
 
-
 .box .p-2, span, .text{
     color: white;
     font-weight: normal;
@@ -70,7 +68,6 @@ footer{
     max-width: 20px;
 }
 
-
 .left .content-2 .p-2{
     text-align: start;
 }
@@ -87,7 +84,6 @@ footer{
     color: white;
 }
 
-
 .left .content-2 .social a span{
     height: 40px;
     width: 40px;
@@ -103,7 +99,6 @@ footer{
     background: #7209b7;
 }
 
-
 .center .content-2 .fas{
     font-size: 1.4375rem;
     background: #1a1a1a;
@@ -114,7 +109,6 @@ footer{
     border-radius: 50%;
     transition: 0.3s;
 }
-
 
 .center .content-2 .fas:hover{
     background: #7209b7;
@@ -129,8 +123,6 @@ footer{
 .center .content-2 .phone, .center .content-2 .email{
     margin: 10px 0;
 }
-
-
 
 .right form .text{
     font-size: 1.0625rem;
