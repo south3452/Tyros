@@ -24,8 +24,7 @@
 }
 
 html, body{
-    background: #4E1C5E;
-    /* background: #000; */
+    background: #141414;
     width: 100%;
     overflow-x: hidden;
 }
@@ -223,19 +222,15 @@ ul, ol, li{
     z-index: 2;
 }
 
-.textbox-final{
-    margin-bottom: 50px;
-}
-
 .services{
     background: url(/images/wave2.svg) no-repeat;
     background-position: top center;
     background-size: cover;
-    margin-top: -5px;
+    margin-top: -40px;
 }
 
 .textbox-initial{
-    margin-top: 70px
+    margin-top: 10rem;
 }
 
 .cards-container,.person{
@@ -525,8 +520,8 @@ form .textarea textarea:focus::placeholder{
        padding: 50px;
        flex-direction: column; 
     }
-    .textbox-final{
-        margin-bottom: 0
+    .services{
+        margin-top: -10rem;
     }
     .logo-text{
         padding: 0
